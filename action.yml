@@ -1,7 +1,7 @@
 # action.yml
-name: 'GitHub Action for WeChat Work'
-description: 'Send WeChat Work message. Run on any operating platform, such as Windows, Linux, Mac supported by GitHub'
-author: 'chf007 <chf007server@gmail.com>'
+name: '企业微信webhook'
+description: '用github action 向企业微信webhook发送消息'
+author: 'aaron <walkthunder@163.com>'
 branding:
   icon: 'message-circle'
   color: 'red'
