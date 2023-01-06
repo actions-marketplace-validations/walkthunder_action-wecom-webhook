@@ -111,6 +111,15 @@ if (process.env.INPUT_MSGTYPE === 'template_card') {
     template_card = JSON.parse(process.env.INPUT_TEMPLATE_CARD);
     const repoUrl = (template_card?.card_action?.url || '').replace('git://', 'https://')
     template_card.card_action.url = repoUrl;
+    template_card?.jump_list.forEach(item => {
+      const url = item.url;
+      // 支持跳转到 commit 链接
+      if (url && url.startsWith('SHA')) {
+        const base = item.base.replace('git://', 'https://').replace('.git', '').replace(/\/$/, '')
+        item.url = `${base}/commit/${url.replace('SHA', '')}`
+        delete item.base
+      }
+    });
   } catch (error) {
     template_card = {};
     console.error(`[action-wechat-work] INPUT_TEMPLATE_CARD JSON.parse error: ${error}, JSON string: ${process.env.INPUT_TEMPLATE_CARD}`);
