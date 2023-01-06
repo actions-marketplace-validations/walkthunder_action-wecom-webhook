@@ -123,12 +123,12 @@ const url = process.env.WECHAT_WORK_BOT_WEBHOOK;
 
 (async () => {
     console.log('[action-wechat-work] Sending message ...');
-    await axios.post(url, JSON.stringify(payload), {
+    const resp = await axios.post(url, JSON.stringify(payload), {
         headers: {
             'Content-Type': 'application/json'
         },
     });
-    console.log('[action-wechat-work] Message sent Success! Shutting down ...');
+    console.log('[action-wechat-work] request response: ', resp);
     process.exit(0);
 })()
     .catch((err) => {

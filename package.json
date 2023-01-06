@@ -1,6 +1,6 @@
 {
   "name": "action-wechat-work",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "GitHub Action that sends a WeChat Work notification.",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chf007/action-wechat-work.git"
+    "url": "git+https://github.com/walkthunder/action-wecom-webhook.git"
   },
   "keywords": [
     "wechat",
@@ -18,12 +18,12 @@
     "github",
     "action"
   ],
-  "author": "chf007 <chf007server@gmail.com>",
+  "author": "aaron <walkthunder@163.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chf007/action-wechat-work/issues"
+    "url": "https://github.com/walkthunder/action-wecom-webhook/issues"
   },
-  "homepage": "https://github.com/chf007/action-wechat-work#readme",
+  "homepage": "https://github.com/walkthunder/action-wecom-webhook#readme",
   "dependencies": {
     "axios": "^0.27.2"
   },
