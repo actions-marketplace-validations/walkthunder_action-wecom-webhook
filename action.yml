@@ -1,5 +1,5 @@
 # action.yml
-name: '企业微信webhook'
+name: 'GA薅羊毛专项——企业微信webhook'
 description: '用github action 向企业微信webhook发送消息'
 author: 'aaron <walkthunder@163.com>'
 branding:
